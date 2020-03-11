@@ -28,19 +28,18 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        for (int i = 1; i <= COUNT; i++) {
-            addItem(createDummyItem(i));
-        }
+        addItem(new ItemModel("Gold Sword", "Really Sharp", 1, 1, 1,"sword2.png"));
+        addItem(new ItemModel("Strong Shield", "Good and Strong", 0, 0, 2,"shield4.png"));
+        addItem(new ItemModel("Bunny Hat", "I Live for speed", 0, 0, 3,"hat1.png"));
     }
+
 
     private static void addItem(ItemModel item) {
         ITEMS.add(item);
         ITEM_MAP.put(item.id, item);
     }
 
-    private static ItemModel createDummyItem(int position) {
-        return new ItemModel(String.valueOf(position), "Item " + position, makeDetails(position));
-    }
+
 
     private static String makeDetails(int position) {
         StringBuilder builder = new StringBuilder();
@@ -66,7 +65,7 @@ public class ItemViewModel {
         public final String ImageURI;
 
 
-        public ItemModel(String Name, int Range, int Damage, int Value, String Description, String ImageURI) {
+        public ItemModel(String Name, String Description, int Range, int Damage, int Value, String ImageURI) {
             this.Range = Range;
             this.Damage = Damage;
             this.Value = Value;
