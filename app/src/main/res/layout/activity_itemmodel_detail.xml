@@ -51,4 +51,12 @@
         app:layout_anchorGravity="top|end"
         app:srcCompat="@android:drawable/stat_notify_chat" />
 
+    <ImageView
+        android:id="@+id/itemmodel_URI"
+        android:layout_width="235dp"
+        android:layout_height="153dp"
+        app:layout_anchor="@+id/app_bar"
+        app:layout_anchorGravity="center"
+        app:srcCompat="@drawable/helmet" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
