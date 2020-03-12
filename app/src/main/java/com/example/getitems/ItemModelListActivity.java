@@ -117,9 +117,8 @@ public class ItemModelListActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
-            holder.mIdView.setText(mValues.get(position).id);
-            // TODO: Changed to Name below cz of error
-            holder.mContentView.setText(mValues.get(position).Name);
+            holder.mIdView.setText(mValues.get(position).Name);
+            holder.mContentView.setText(mValues.get(position).Value);
 
             holder.itemView.setTag(mValues.get(position));
             holder.itemView.setOnClickListener(mOnClickListener);
