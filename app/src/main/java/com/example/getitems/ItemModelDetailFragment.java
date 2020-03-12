@@ -61,12 +61,18 @@ public class ItemModelDetailFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.itemmodel_detail, container, false);
 
         // Show the dummy content as text in a TextView.
+        View rootView = inflater.inflate(R.layout.itemmodel_detail, container, false);
+
         if (mItem != null) {
-            // TODO: Edited myItem.Description
-            ((TextView) rootView.findViewById(R.id.itemmodel_detail)).setText(mItem.Description);
+
+            // Show all the Fields
+            ((TextView) rootView.findViewById(R.id.ItemDetails_NameValue)).setText(mItem.Name);
+            ((TextView) rootView.findViewById(R.id.ItemDetails_DescriptionValue)).setText(mItem.Description);
+            ((TextView) rootView.findViewById(R.id.ItemDetails_RangeValue)).setText(String.valueOf(mItem.Range));
+            ((TextView) rootView.findViewById(R.id.ItemDetails_ValueValue)).setText(String.valueOf(mItem.Value));
+            ((TextView) rootView.findViewById(R.id.ItemDetails_DamageValue)).setText(String.valueOf(mItem.Damage));
         }
 
         return rootView;
