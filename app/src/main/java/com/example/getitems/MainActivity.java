@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final TextView text = (TextView) findViewById(R.id.text2);
-        final Button button = (Button) findViewById(R.id.button1);
+        final Button button = (Button) findViewById(R.id.button2);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
