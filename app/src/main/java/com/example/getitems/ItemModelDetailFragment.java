@@ -52,7 +52,8 @@ public class ItemModelDetailFragment extends Fragment {
             Activity activity = this.getActivity();
             CollapsingToolbarLayout appBarLayout = (CollapsingToolbarLayout) activity.findViewById(R.id.toolbar_layout);
             if (appBarLayout != null) {
-                appBarLayout.setTitle(mItem.content);
+                // Edited this to suppress error
+                appBarLayout.setTitle(mItem.Name);
             }
         }
     }
@@ -64,7 +65,8 @@ public class ItemModelDetailFragment extends Fragment {
 
         // Show the dummy content as text in a TextView.
         if (mItem != null) {
-            ((TextView) rootView.findViewById(R.id.itemmodel_detail)).setText(mItem.details);
+            // TODO: Edited myItem.Description
+            ((TextView) rootView.findViewById(R.id.itemmodel_detail)).setText(mItem.Description);
         }
 
         return rootView;
