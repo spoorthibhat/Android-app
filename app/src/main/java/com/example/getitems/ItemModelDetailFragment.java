@@ -61,7 +61,7 @@ public class ItemModelDetailFragment extends Fragment {
                 ImageView image = ((ImageView) activity.findViewById(R.id.itemmodel_URI));
                 // Get the image from the drawable folder
                 String uri = "@drawable/" + mItem.ImageURI;  // where myresource (without the extension) is the file
-                int imageResource = getResources().getIdentifier(uri, "drawable", "com.example.getitems");
+                int imageResource = getResources().getIdentifier(uri, "drawable", getContext().getPackageName());
                 Drawable res = getResources().getDrawable(imageResource);
                 image.setImageDrawable(res);
 

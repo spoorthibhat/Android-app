@@ -28,9 +28,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Viking Helmet", "Really Strong", 1, 1, 1,"helmet.png"));
-        addItem(new ItemModel("Heat Shield", "Good and Strong", 0, 0, 2,"heat_shield.png"));
-        addItem(new ItemModel("Muffler", "Protects from cold", 0, 0, 3,"muffler.png"));
+        addItem(new ItemModel("Viking Helmet", "Really Strong", 1, 1, 1,"helmet"));
+        addItem(new ItemModel("Heat Shield", "Good and Strong", 0, 0, 2,"heat_shield"));
+        addItem(new ItemModel("Muffler", "Protects from cold", 0, 0, 3,"muffler"));
     }
 
 
