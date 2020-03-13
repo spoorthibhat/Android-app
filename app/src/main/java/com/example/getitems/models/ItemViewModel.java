@@ -28,9 +28,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Viking Helmet", "Really Strong", 1, 0, 5,"helmet.png"));
-        addItem(new ItemModel("Heat Shield", "Good and Strong", 4, 4, 5,"heat_shield.png"));
-        addItem(new ItemModel("Muffler", "Protects from cold", 0, 0, 4,"muffler.png"));
+        addItem(new ItemModel("Viking Helmet", "Really Strong", 1, 1, 1,"helmet.png"));
+        addItem(new ItemModel("Heat Shield", "Good and Strong", 0, 0, 2,"heat_shield.png"));
+        addItem(new ItemModel("Muffler", "Protects from cold", 0, 0, 3,"muffler.png"));
     }
 
 
@@ -39,16 +39,6 @@ public class ItemViewModel {
         ITEM_MAP.put(item.id, item);
     }
 
-
-
-    private static String makeDetails(int position) {
-        StringBuilder builder = new StringBuilder();
-        builder.append("Details about Item: ").append(position);
-        for (int i = 0; i < position; i++) {
-            builder.append("\nMore details information here.");
-        }
-        return builder.toString();
-    }
 
     /**
      * A dummy item representing a piece of content.
