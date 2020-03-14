@@ -10,11 +10,11 @@
     <color name="lightBackgroundcolor">#EBFFDE</color>
 
     <color name="primaryTextcolor">#2F4024</color>
-    <color name="secondaryTextcolor">#75806F</color>
+    <color name="secondaryTextcolor">#00574B</color>
     <color name="triciaryTextcolor">#733612</color>
 
-    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimary">#7DE879</color>
     <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">#FFFC85</color>
 
 </resources>
