@@ -85,6 +85,7 @@ public class ItemModelDetailFragment extends Fragment {
             ((TextView) rootView.findViewById(R.id.ItemDetails_ValueValue)).setText(String.valueOf(mItem.Value));
             ((TextView) rootView.findViewById(R.id.ItemDetails_DamageValue)).setText(String.valueOf(mItem.Damage));
             ((TextView) rootView.findViewById(R.id.ItemDetails_LocationValue)).setText(String.valueOf(mItem.Location));
+            ((TextView) rootView.findViewById(R.id.ItemDetails_AttributeValue)).setText(String.valueOf(mItem.Attribute));
         }
 
         return rootView;
