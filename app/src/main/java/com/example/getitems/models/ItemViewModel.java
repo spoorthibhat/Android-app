@@ -1,5 +1,6 @@
 package com.example.getitems.models;
 
+import com.example.getitems.AttributeEnum;
 import com.example.getitems.ItemLocationEnum;
 
 import java.util.ArrayList;
@@ -30,9 +31,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Viking Helmet", "Really Strong", 1, 1, 1,"helmet", ItemLocationEnum.Head));
-        addItem(new ItemModel("Heat Shield", "Good and Strong", 0, 0, 2,"heat_shield", ItemLocationEnum.OffHand));
-        addItem(new ItemModel("Muffler", "Protects from cold", 0, 0, 3,"muffler", ItemLocationEnum.Necklass));
+        addItem(new ItemModel("Viking Helmet", "Really Strong", 1, 1, 1,"helmet", ItemLocationEnum.Head, AttributeEnum.Attack));
+        addItem(new ItemModel("Heat Shield", "Good and Strong", 0, 0, 2,"heat_shield", ItemLocationEnum.OffHand, AttributeEnum.Defense));
+        addItem(new ItemModel("Muffler", "Protects from cold", 0, 0, 3,"muffler", ItemLocationEnum.Necklass, AttributeEnum.Defense));
     }
 
 
@@ -56,9 +57,10 @@ public class ItemViewModel {
         public final String Guid = id;
         public final String ImageURI;
         public final ItemLocationEnum Location;
+        public final AttributeEnum Attribute;
 
 
-        public ItemModel(String Name, String Description, int Range, int Damage, int Value, String ImageURI, ItemLocationEnum location) {
+        public ItemModel(String Name, String Description, int Range, int Damage, int Value, String ImageURI, ItemLocationEnum location, AttributeEnum Attribute) {
             this.Range = Range;
             this.Damage = Damage;
             this.Value = Value;
@@ -66,6 +68,7 @@ public class ItemViewModel {
             this.Description = Description;
             this.ImageURI = ImageURI;
             this.Location = location;
+            this.Attribute = Attribute;
         }
 
         @Override
