@@ -1,5 +1,7 @@
 package com.example.getitems.models;
 
+import com.example.getitems.ItemLocationEnum;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,9 +30,9 @@ public class ItemViewModel {
 
     static {
         // Add some sample items.
-        addItem(new ItemModel("Viking Helmet", "Really Strong", 1, 1, 1,"helmet"));
-        addItem(new ItemModel("Heat Shield", "Good and Strong", 0, 0, 2,"heat_shield"));
-        addItem(new ItemModel("Muffler", "Protects from cold", 0, 0, 3,"muffler"));
+        addItem(new ItemModel("Viking Helmet", "Really Strong", 1, 1, 1,"helmet", ItemLocationEnum.Head));
+        addItem(new ItemModel("Heat Shield", "Good and Strong", 0, 0, 2,"heat_shield", ItemLocationEnum.OffHand));
+        addItem(new ItemModel("Muffler", "Protects from cold", 0, 0, 3,"muffler", ItemLocationEnum.Necklass));
     }
 
 
@@ -53,15 +55,17 @@ public class ItemViewModel {
         public final String id = UUID.randomUUID().toString();
         public final String Guid = id;
         public final String ImageURI;
+        public final ItemLocationEnum Location;
 
 
-        public ItemModel(String Name, String Description, int Range, int Damage, int Value, String ImageURI) {
+        public ItemModel(String Name, String Description, int Range, int Damage, int Value, String ImageURI, ItemLocationEnum location) {
             this.Range = Range;
             this.Damage = Damage;
             this.Value = Value;
             this.Name = Name;
             this.Description = Description;
             this.ImageURI = ImageURI;
+            this.Location = location;
         }
 
         @Override
